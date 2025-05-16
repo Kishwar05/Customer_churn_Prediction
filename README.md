@@ -1,9 +1,6 @@
 # 📊 Telecom Customer Churn Prediction
 
 A Machine Learning-powered Streamlit web application to predict customer churn based on telecom usage patterns. This app not only predicts if a customer is likely to churn but also displays animated feedback and graphical representations to enhance user understanding.
-
----
-
 ## 🚀 Features
 
 - 🔍 Predicts customer churn using a trained ML model
@@ -35,12 +32,3 @@ pickle
 matplotlib
 seaborn
 scikit-learn
-
-
-### ✅ What to do next:
-1. Save this content as `README.md` in your project folder.
-2. Commit and push it to GitHub using:
-   ```bash
-   git add README.md
-   git commit -m "Add project README"
-   git push origin main
