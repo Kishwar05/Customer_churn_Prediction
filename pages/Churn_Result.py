@@ -18,7 +18,7 @@ def show_result(prediction, probability, customer_name=None):
 
     st.progress(int(probability * 100))
 
-    fig, ax = plt.subplots()
+    fig,ax = plt.subplots(figsize=(3, 2))
     ax.bar(['Churn', 'No Churn'], [probability, 1 - probability], color=['#e57373', '#81c784'])
     ax.set_ylabel("Probability")
     ax.set_ylim(0, 1)
@@ -34,10 +34,7 @@ def show_result(prediction, probability, customer_name=None):
         'customer_name': customer_name
     })
 
-    # Back to form
-    if st.button("🔙 Back to Input Page"):
-        st.session_state['page'] = 'input'
-        st.rerun()
+    
 
 
 
