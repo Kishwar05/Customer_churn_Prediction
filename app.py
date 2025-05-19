@@ -4,7 +4,6 @@ import pickle
 
 st.set_page_config(layout="wide", page_title="Customer Churn Predictor", page_icon="📊")
 st.title("📊 Telecom Churn Prediction System")
-
 # Load model and encoders
 model = pickle.load(open('model/churn_model.pkl', 'rb'))
 label_encoders = pickle.load(open('model/label_encoders.pkl', 'rb'))
@@ -18,7 +17,6 @@ if 'page' not in st.session_state:
 if st.session_state.page == 'input':
     st.subheader("Enter Customer Information")
     customer_name = st.text_input("Customer Name")
-
     col1, col2 = st.columns(2)
     with col1:
         tenure = st.slider("Tenure (months)", 0, 72, 12)
@@ -63,7 +61,6 @@ if st.session_state.page == 'input':
         st.session_state.probability = prob
         st.session_state.customer_name = customer_name
         st.session_state.page = 'result'
-
         st.rerun()
 
 # -------------------- RESULT PAGE --------------------
@@ -76,8 +73,8 @@ if st.session_state.page == 'result':
     )
 
     if st.button("🔄 Back to Input Page"):
-        st.session_state.page = 'input'
-        st.rerun()
+       st.session_state.page = 'input'
+       st.rerun()
 
 
 
